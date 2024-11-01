@@ -1,8 +1,11 @@
-print("Dzień dobry podaj wymiar boku a: ")
-a = int(input())
-print("Dzień dobry podaj wymiar boku b: ")
-b = int(input())
-pole = a * b
-obwod = a * b * 2
+#a)
+with open('notowania_gieldowe.txt', 'r') as plik:
+    for linia in plik:
+        print(linia.strip())
+#b)
+with open('notowania_gieldowe.txt', 'a') as plik:
+    plik.write('ALR, 113\n')
 
-print("Twój prostokąt ma obwód o wartości:", obwod, "i pole o wartości", pole)
+with open('notowania_gieldowe.txt', 'r') as plik:
+    for linia in plik:
+        print(linia.strip())
